@@ -177,3 +177,115 @@ Dans le header de la Requéte :
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
 | `Authorization` | `JWT` | Bearer <exemple jwt > |
+
+#### Coter administrateur voir tous les user :
+
+```http
+  GET /api/manage/users
+```
+Dans le header de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `JWT` | Bearer <exemple jwt > |
+
+
+#### Coter administrateur voir un seul user via son id :
+
+```http
+  GET /api/manage/users/{id}
+```
+Dans le header de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `JWT` | Bearer <exemple jwt > |
+
+#### Coter administrateur ajouter un user :
+
+```http
+  POST /api/manage/users/
+```
+Dans le header de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `JWT` | Bearer <exemple jwt > |
+
+Dans le corps de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `email` | `string` | jhone.doe@mail.fr |
+| `name` | `string` | jhone doe |
+| `password` | `string` | azerty1345::3355 |
+| `phone` | `string` | 07 08 09 03 08 |
+
+#### Coter administrateur modifier un user :
+
+```http
+  PUT /api/manage/users/{id}
+```
+Dans le header de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `JWT` | Bearer <exemple jwt > |
+
+Dans le corps de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `email` | `string` | jhone.doe@mail.fr |
+| `name` | `string` | jhone doe |
+| `password` | `string` | azerty1345::3355 |
+| `phone` | `string` | 07 08 09 03 08 |
+
+#### Coter administrateur supprimer un user :
+
+```http
+  DELETE /api/manage/users/{id}
+```
+Dans le header de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `JWT` | Bearer <exemple jwt > |
+
+#### Coter administrateur supprimer une reservation :
+
+```http
+  DELETE /api/manage/reservation/{id}
+```
+Dans le header de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `JWT` | Bearer <exemple jwt > |
+
+#### Coter administrateur modifier une reservation :
+
+```http
+  PUT /api/manage/reservation/{id}
+```
+Dans le header de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `JWT` | Bearer <exemple jwt > |
+
+Dans le corps de la Requéte :
+
+| Parametre | Type     | Exemple               |
+| :-------- | :------- | :------------------------- |
+| `date` | `string` | `2024-12-15` |
+| `timeSlot` | `string` | `14:00-16:00` |
+| `eventName` | `string` | `Conférence sur l'innovation technologique` |
+
+
+
+
+
+
+
+
