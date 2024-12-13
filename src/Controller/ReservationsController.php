@@ -17,19 +17,29 @@ class ReservationsController extends AbstractController
     public function addReservation(
         Request $request,
         SerializerInterface $serializer, 
-        EntityManagerInterface $entityManager
+        EntityManagerInterface $entityManager,
+        ReservationRepository $reservationRepository
     ): JsonResponse {
         $this->denyAccessUnlessGranted('ROLE_USER');
         $user = $this->getUser();
         $jsonData = $request->getContent();
         $data = json_decode($request->getContent(), true);
+        $date = new \DateTime($data['date']);
 
         if(!$data['date']){
-            return new JsonResponse(['error' => 'Date introuvable'], JsonResponse::HTTP_CREATED, [], true); 
+            return new JsonResponse(['error' => 'Date introuvable'], JsonResponse::HTTP_CREATED ); 
         }
 
-        if (new \DateTime($data['date']) <= new \DateTime()) {
-            return new JsonResponse(['error' => 'Il est trop tard pour réserver'], JsonResponse::HTTP_BAD_REQUEST, [], true);
+        if ($date <= new \DateTime()) {
+            return new JsonResponse(['error' => 'Il est trop tard pour réserver'], JsonResponse::HTTP_BAD_REQUEST );
+        }
+
+        $sameDates = $reservationRepository->findBy(['date' => $date]); 
+
+        foreach($sameDates as $sameDate){
+            if($sameDate->getTimeSlot() == $data['timeSlot']){
+                return new JsonResponse(['error' => 'plage horaire indisponible'], JsonResponse::HTTP_BAD_REQUEST );
+            }
         }
 
         $reservation = $serializer->deserialize($jsonData, Reservation::class, 'json');

@@ -17,15 +17,15 @@ class Reservation
     private ?int $id = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    #[Groups('getReservation') ]
+    #[Groups(['getUser', 'getReservation']) ]
     private ?\DateTimeInterface $date = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups('getReservation') ]
+    #[Groups(['getUser', 'getReservation']) ]
     private ?string $timeSlot = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups('getReservation') ]
+    #[Groups(['getUser', 'getReservation']) ]
     private ?string $eventName = null;
 
     #[ORM\ManyToOne(inversedBy: 'user')]

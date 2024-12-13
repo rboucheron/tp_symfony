@@ -43,6 +43,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     #[ORM\OneToMany(targetEntity: Reservation::class, mappedBy: 'user', cascade: ['remove'])]
+    #[Groups('getUser') ]
     private Collection $reservations;
 
     public function __construct()
