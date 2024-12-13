@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  database:
+    image: postgres:15
+    container_name: tpboucheron-db
+    ports:
+      - "8889:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: tpboucheron
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - tpboucheron-network
+
+networks:
+  tpboucheron-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
