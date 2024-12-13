@@ -115,7 +115,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt}  |
 
 
 #### Modifier son profil :
@@ -127,7 +127,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 Dans le corps de la Requéte :
 
@@ -145,7 +145,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 Dans le corps de la Requéte :
 
@@ -164,7 +164,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 
 #### Voir toutes les réservations :
@@ -176,7 +176,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 #### Coter administrateur voir tous les user :
 
@@ -187,7 +187,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 
 #### Coter administrateur voir un seul user via son id :
@@ -199,7 +199,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 #### Coter administrateur ajouter un user :
 
@@ -210,7 +210,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 Dans le corps de la Requéte :
 
@@ -230,7 +230,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 Dans le corps de la Requéte :
 
@@ -250,7 +250,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 #### Coter administrateur supprimer une reservation :
 
@@ -261,7 +261,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 #### Coter administrateur modifier une reservation :
 
@@ -272,7 +272,7 @@ Dans le header de la Requéte :
 
 | Parametre | Type     | Exemple               |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `JWT` | Bearer <exemple jwt > |
+| `Authorization` | `JWT` | Bearer {exemple jwt} |
 
 Dans le corps de la Requéte :
 
